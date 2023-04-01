@@ -1,0 +1,131 @@
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "ivy"
+version = "1.1.10"
+description = """A Python package for building and managing data pipelines. It provides a high-level API for creating and managing data pipelines, as well as a number of features to help you debug and optimize your pipelines."""
+authors = ["Unify AI <info@unify.ai>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "~=1.22"
+einops = "~=0.4.1"
+psutil = "~=5.9.1"
+termcolor = "~=1.1.0"
+colorama = "~=0.4.5"
+packaging = "~=21.3"
+nvidia-ml-py = "~=11.495.46"
+
+[tool.poetry.dev-dependencies]
+pytest = "latest"
+coverage = "latest"
+
+[tool.poetry.optional-dependencies]
+# Base dependencies
+h5py = "latest"
+networkx = "latest"
+hypothesis = "latest"
+pymongo = "latest"
+redis = "latest"
+matplotlib = "latest"
+opencv-python = "latest" # mod_name=cv2
+scipy = "latest"
+pydriller = "latest"
+tqdm = "latest"
+coverage = "latest"
+# Deep Learning frameworks
+jax = { version = "latest", extras = ["cpu"] }
+jaxlib = "latest"
+paddlepaddle = "latest"
+tensorflow-cpu = "latest"
+tensorflow-addons = "latest"
+tensorflow-probability = "latest"
+torch = "latest"
+torch-scatter = "latest"
+functorch = "latest"
+mxnet = "latest"
+# Miscellaneous libraries
+scikit-learn = "latest"
+pandas = "latest"
+pyspark = "latest"
+autoflake = "latest"
+
+[tool.poetry.extras.applied]
+kornia = "latest"
+torch-geometric = "latest"
+botorch = "latest"
+gpytorch = "latest"
+gradslam = "latest"
+fastai = "latest"
+pytorch-lightning = "latest"
+tensorly = "latest"
+thinc = "latest"
+transformers = "latest"
+accelerate = "latest"
+diffusers = "latest"
+timm = "latest"
+flax = "latest"
+flower = "latest"
+rllib = "latest"
+seaborn = "latest"
+datasets = "latest"
+validator = "latest"
+
+[tool.poetry.extras.gpu]
+h5py = "latest"
+pytest = "latest"
+networkx = "latest"
+hypothesis = "latest"
+pymongo = "latest"
+redis = "latest"
+matplotlib = "latest"
+opencv-python = "latest" # mod_name=cv2
+jax = "latest"
+jaxlib = "latest"
+tensorflow = "latest"
+tensorflow-addons = "latest"
+tensorflow-probability = "latest"
+torch = "latest"
+torch-scatter = "latest"
+functorch = "latest"
+scipy = "latest"
+dm-haiku = "latest"
+pydriller = "latest"
+tqdm = "latest"
+coverage = "latest"
+
+
+[tool.poetry.extras.m1_1]
+h5py = "latest"
+pytest = "latest"
+networkx = "latest"
+hypothesis = "latest"
+pymongo = "latest"
+redis = "latest"
+matplotlib = "latest"
+opencv-python = "latest" # mod_name=cv2
+jax = "latest"
+jaxlib = "latest"
+tensorflow-macos = "latest"
+tensorflow-addons = "latest"
+tensorflow-probability = "latest"
+torch = "latest"
+
+[tool.poetry.extras.m1_2]
+torch-scatter = "latest"
+functorch = "latest"
+scipy = "latest"
+dm-haiku = "latest"
+protobuf = "latest"
+pydriller = "latest"
+tqdm = "latest"
+coverage = "latest"
+
+[tool.poetry.scripts]
+build = "poetry build"
+install = "poetry install"
+run = "poetry run"
+test = "poetry run pytest"
